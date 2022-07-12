@@ -1,0 +1,77 @@
+
+<br>
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Employés</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Nouveau Employés</li>
+  </ol>
+</nav>
+<!-- <div class="col-md-8 offset-md-2">
+  <br>
+  <h3 class="text-center">  </h3>
+<form  (ngSubmit) = "onSubmit()">
+
+  <div class="form-group">
+    <label> Nom</label>
+    <input type="text" class="form-control" id="firstName"
+    [(ngModel)] = "employee.firstName" name="firstName">
+  </div>
+
+  <div class="form-group">
+    <label> Prénom</label>
+    <input type="text" class="form-control" id="lastName"
+    [(ngModel)] = "employee.lastName" name="lastName">
+  </div>
+
+  <div class="form-group">
+    <label> Adresse E-mail</label>
+    <input type="text" class="form-control" id="emailId"
+    [(ngModel)] = "employee.emailId" name="emailId">
+  </div>
+<br>
+  <div class="text-center">
+    <button type="submit" class="btn btn-info">Enrégistrer</button>
+  </div>
+
+</form>
+</div>-->
+
+<div class="container register">
+  <div class="row">
+      <div class="col-md-12">
+
+          <div class="tab-content" id="myTabContent">
+            <h1 class="text-center" style="color:white ;">Ajouter Employés</h1>
+              <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                  <div class="row register-form">
+                      <div class="col-md-12">
+                          <form (ngSubmit) = "onSubmit()">
+                            <div class="row mb-3">
+                              <div class="form-group">
+                                  <input type="text"  [(ngModel)] = "employee.firstName" name="firstName" class="form-control" placeholder="Entrer Nom *" id="firstName"  required=""/>
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <div class="form-group">
+                                  <input type="text"  [(ngModel)] = "employee.lastName" name="lastName" class="form-control" placeholder="Entrer Prénom *" id="lastName" required=""/>
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <div class="form-group">
+                                <input type="text"  [(ngModel)] = "employee.emailId" name="emailId" class="form-control" placeholder="Entrer Adresse E-mail *" id="emailId"  required=""/>
+                            </div>
+                          </div>
+                              <div class="form-group">
+                                  <input type="submit"  class="btnContactSubmit"  />
+
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>

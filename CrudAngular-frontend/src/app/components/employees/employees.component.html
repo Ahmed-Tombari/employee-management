@@ -1,0 +1,74 @@
+
+<br>
+<h1 class="text-center">Liste Employés</h1>
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Employés</a></li>
+    <li class="breadcrumb-item active" aria-current="page">List Employés</li>
+  </ol>
+</nav>
+
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"> <h6 class="card-title">Employees Details</h6></div>
+                    <div class="col-sm-4">
+                        <div class="search-box">
+                          <i class="fa fa-magnifying-glass"></i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nom </th>
+                        <th>Prénom </th>
+                        <th>Adresse E-mail </th>
+                        <th>Action </th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let employee of employees">
+                    <tr>
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.firstName}}</td>
+                        <td>{{employee.lastName}}</td>
+                        <td>{{employee.emailId}}</td>
+
+                        <td>
+                             <a class="btn btn-primary" title="View" data-toggle="tooltip" type="button"  (click)="getEmployeeById(employee.id)"> <i class="feather icon-eye" style="color: rgb(255, 255, 255);"></i></a> &nbsp;&nbsp;
+                            <a class="btn btn-warning" title="Edit" data-toggle="tooltip" type="button" (click)="updateEmployee(employee.id)"><i class="feather icon-edit" style="color: Mediumslateblue;"></i></a>&nbsp;&nbsp;
+                            <a class="btn btn-danger" title="Delete" data-toggle="tooltip" type="button" (click)="deleteEmployee(employee.id)" style="color: rgb(0, 0, 0);"><i class="feather icon-delete"></i></a>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table><br>
+
+            <div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
